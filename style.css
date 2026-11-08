@@ -1,13 +1,12 @@
 * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
 body { background:#020617; color:#E2E8F0; }
 nav { background:#020617; color:white; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; border-bottom:2px solid #1E40AF; }
-.logo { font-size:24px; font-weight:900; letter-spacing:1px; color:white; }
+.logo { font-size:24px; font-weight:900; color:white; }
 .logo span { color:#3B82F6; }
 .links a { color:#CBD5E1; text-decoration:none; margin:0 10px; font-weight:bold; font-size:15px; }
-.links a:hover { color:white; }
 .hero { background:#020617; color:white; padding:60px 22px; text-align:center; border-bottom:1px solid #1E40AF; }
 .welcome { background:#1E40AF; color:#DBEAFE; display:inline-block; padding:8px 18px; border-radius:20px; font-weight:bold; font-size:13px; letter-spacing:2px; }
-.hero h1 { font-size:48px; line-height:1.1; margin-top:18px; letter-spacing:1px; color:white; }
+.hero h1 { font-size:48px; margin-top:18px; color:white; }
 .hero h1 span { color:#3B82F6; }
 .hero h2 { margin:15px 0; font-size:21px; color:#BFDBFE; }
 .desc { font-size:18px; max-width:620px; margin:0 auto; line-height:1.7; color:#CBD5E1; }
@@ -22,5 +21,4 @@ nav { background:#020617; color:white; padding:18px 20px; display:flex; justify-
 .card h3 { color:#60A5FA; margin-bottom:8px; font-size:18px; }
 .card p { font-size:15px; font-weight:normal; color:#CBD5E1; }
 .contact { text-align:center; background:#0F172A; }
-.contact h2 { color:white; }
 @media(max-width:600px){ .grid{ grid-template-columns:1fr; } .hero h1{ font-size:36px; } }
