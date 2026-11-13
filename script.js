@@ -1,26 +1,49 @@
-* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
-body { background:#fff0f6; color:#222; }
-nav { background:#4a00e0; color:white; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
-.logo { font-size:24px; font-weight:900; }
-.logo span { color:#ff5ea8; }
-.links a { color:white; text-decoration:none; margin:0 10px; font-weight:bold; font-size:16px; }
-.hero { background: linear-gradient(135deg, #8e2de2, #ff5ea8); color:white; padding:50px 22px; text-align:center; }
-.welcome { background:white; color:#8e2de2; display:inline-block; padding:8px 16px; border-radius:20px; font-weight:bold; margin-bottom:15px; }
-.hero h1 { font-size:42px; line-height:1.2; }
-.hero h1 span { color:#ffe600; }
-.hero h2 { margin:15px 0; font-size:22px; }
-.desc { font-size:18px; max-width:600px; margin:0 auto; line-height:1.6; }
-.btns { margin-top:25px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-.btn1 { background:white; color:#8e2de2; padding:14px 22px; border-radius:30px; text-decoration:none; font-weight:900; font-size:17px; }
-.btn2 { background:#0a66c2; color:white; padding:14px 22px; border-radius:30px; text-decoration:none; font-weight:900; font-size:17px; }
-.box { background:white; margin:20px 15px; padding:30px 20px; border-radius:20px; box-shadow:0 5px 20px rgba(0,0,0,0.08); }
-.box h2 { font-size:30px; color:#8e2de2; margin-bottom:15px; text-align:center; }
-.box p { font-size:18px; line-height:1.7; text-align:center; }
-.grid { display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-top:20px; }
-.card { background:#fdf2f8; border:2px solid #ffd1e8; padding:20px; border-radius:15px; text-align:center; font-size:18px; font-weight:bold; }
-.card h3 { color:#4a00e0; margin-bottom:8px; }
-.card p { font-size:15px; font-weight:normal; }
-.contact { text-align:center; background:#4a00e0; color:white; }
-.contact h2 { color:white; }
-.contact p { color:white; }
-@media(max-width:600px){ .grid{ grid-template-columns:1fr; } .hero h1{ font-size:34px; } }
+// 1. Hello Button Ka Kaam
+function sayHello() {
+  alert("Hello! I am Mehreen Fatima - AI Engineer. Let's work together! Check my LinkedIn for more.");
+}
+
+// 2. Website Khulte Hi Welcome Message
+console.log("Welcome to Mehreen Fatima Portfolio!");
+
+// 3. Neeche Scroll Karne Pe Smooth Jana
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    let target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// 4. Cards Pe Mouse Le Jane Pe Halka Sa Hilna
+let cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.transform = "scale(1.03)";
+    this.style.transition = "0.3s";
+  });
+  card.addEventListener('mouseleave', function() {
+    this.style.transform = "scale(1)";
+  });
+});
+
+// 5. Header Ka Rang Change Hona Jab Scroll Karo
+window.addEventListener('scroll', function() {
+  let header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.style.background = "#0F1738";
+  } else {
+    header.style.background = "rgba(7,11,30,0.9)";
+  }
+});
+
+// 6. Stats Wale Numbers Ko Animate Karna
+let stats = document.querySelectorAll('.stats h3');
+stats.forEach(stat => {
+  stat.style.color = "#F5D67B";
+});
+
+// 7. Contact Button Pe Click Karne Pe Message
+console.log("Mehreen Fatima - Portfolio Loaded Successfully!");
